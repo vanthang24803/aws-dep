@@ -1,0 +1,4 @@
+echo "Runing build application 💀💀💀💀💀"
+npx prettier --write "src/**/*.js"
+
+echo "Application build sucess 👏👏👏👏👏"
