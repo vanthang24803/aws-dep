@@ -1,0 +1,56 @@
+<%- include('../../layouts/header') %>
+<body style="background-color: #ccc">
+  <div
+    class="container d-flex align-items-center justify-content-center"
+    style="height: 100vh"
+  >
+    <form
+      action="/login/actions"
+      method="POST"
+      class="p-5"
+      id="from_login"
+      style="background-color: white; border-radius: 10px; width: 400px"
+    >
+      <h4>Login</h4>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          type="password"
+          name="password"
+        />
+      </div>
+      <div class="my-3">
+        <a href="/register"> No Account? </a>
+      </div>
+      <button type="submit" class="btn btn-primary col-12">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $('#form_login').on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+          url: '/login/actions',
+          method: 'POST',
+          data: $(this).serialize(),
+          success: function (response) {
+            console.log(response);
+          },
+          error: function (error) {
+            console.log(error);
+          },
+        });
+      });
+    });
+  </script>
+</body>
+
+<%- include('../../layouts/footer') %>

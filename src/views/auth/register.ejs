@@ -1,0 +1,58 @@
+<%- include('../../layouts/header') %>
+<body style="background-color: #ccc">
+  <div
+    class="container d-flex align-items-center justify-content-center"
+    style="height: 100vh"
+  >
+    <form
+      action="/register/actions"
+      method="POST"
+      class="p-5"
+      style="background-color: white; border-radius: 10px; width: 400px"
+    >
+      <h4>Register</h4>
+      <div class="mb-3 row">
+        <div class="col-6">
+          <label for="firstName" class="form-label">First name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstName"
+            name="firstName"
+          />
+        </div>
+        <div class="col-6">
+          <label for="lastName" class="form-label">Last name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="lastName"
+            name="lastName"
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          type="password"
+          name="password"
+        />
+      </div>
+      <div class="my-3">
+        <a href="/login">
+            Have an account?  
+          </a>
+    </div>
+      <button type="submit" class="btn btn-primary col-12">Submit</button>
+    </form>
+  </div>
+</body>
+
+<%- include('../../layouts/footer') %>
