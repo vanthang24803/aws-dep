@@ -1,6 +1,6 @@
-const db = require("@/helpers/db");
+const db = require('@/helpers/db');
 
-const { users} = require("@/schema")
+const { users } = require('@/schema');
 
 class HomeController {
   async index(req, res) {
