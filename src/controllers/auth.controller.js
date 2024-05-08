@@ -28,9 +28,9 @@ class AuthController {
         return res.send(user);
       }
 
-      return res.send("Unauthorized")
+      return res.send('Unauthorized');
     }
-    
+
     return res.send('User not found');
   }
 
