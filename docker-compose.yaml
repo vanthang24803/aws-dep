@@ -1,11 +1,12 @@
 version: '3.8'
 
 services:
-  aws-deploy:
+  aws-lab:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
       - 8000:8000
-    env_file:
-      - .env
+    environment:
+      - PORT=8000
+      - DATABASE_URL = postgresql://thesill_owner:qy8XiUg9Adkr@ep-silent-meadow-a16z7b9s.ap-southeast-1.aws.neon.tech/aws-test?sslmode=require
